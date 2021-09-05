@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
-import { useHistory } from "react-router-dom";
 import { PRODUCTS } from '../core/utils/product';
 import Box from './commons/box';
 export default function Main() {
   const [users, setUsers] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page] = useState(1);
   useEffect(() => {
     fetch(`https://reqres.in/api/users?page=${page}`).then(e => e.json()).then(e => {
       setUsers(e.data)
     })
   }, [page])
-  const [products, setProducts] = useState(PRODUCTS);
+  const [products] = useState(PRODUCTS);
   return (
     <div>
       <div className="container px-0 banner"></div>

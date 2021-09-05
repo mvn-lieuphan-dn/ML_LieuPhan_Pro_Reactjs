@@ -15,7 +15,7 @@ function Login() {
       }
     })
     setProductFav(proFav)
-  }, [products])
+  }, [])
 
 
   return (
