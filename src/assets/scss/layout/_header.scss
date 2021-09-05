@@ -1,0 +1,67 @@
+.wrap-fav-coutner {
+  position: relative;
+  border-right: 1px solid gray;
+  .count {
+    position: absolute;
+    right: 3px;
+    top: -15px;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-weight: 700;
+    color: black;
+  }
+}
+
+.menu-item {
+  .icon {
+    font-size: 25px;
+  }
+  .heart {
+    color: red;
+  }
+  .user {
+    padding-left: 10px;
+    color: rgb(101, 203, 250);
+  }
+}
+
+.header-page {
+  background-color: initial;
+  color: #20232a;
+  width: 100%;
+}
+.header-page .header-wrapper {
+  justify-content: space-between;
+  background-color: #75dfff61;
+}
+.header-left .header-logo {
+  width: 80px;
+}
+.menu-list {
+  margin-bottom: 0;
+}
+.menu-list .menu-item {
+  padding: 0px 10px;
+  font-size: 18px;
+  font-weight: 700;
+  .active {
+    color: rgb(55, 173, 19);
+  } 
+}
+.menu-list .menu-item .menu-item-link {
+  color: #000000;
+}
+.header-right li {
+  padding: 0px 10px;
+}
+.header-right li:last-child {
+  padding-right: 0px;
+}
+.header-right li a {
+  color: #000000;
+}
