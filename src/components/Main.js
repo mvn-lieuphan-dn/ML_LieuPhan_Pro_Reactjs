@@ -33,7 +33,7 @@ export default function Main() {
               users.map((user) => 
                 <li key={user.id} className="user col-4">
                   <div className="wrapper">
-                    <img src={user.avatar}></img>
+                    <img src={user.avatar} alt="img avatar"></img>
                     <h3 className="name">{user.first_name} {user.last_name}</h3>
                     <p className="mail">{user.email}</p>
                   </div>

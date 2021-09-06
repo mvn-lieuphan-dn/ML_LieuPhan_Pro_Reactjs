@@ -1,19 +1,20 @@
 import {
   useParams
 } from "react-router-dom";
-import { FaHeart } from 'react-icons/fa';
+// import { FaHeart } from 'react-icons/fa';
 import { useState, useEffect } from "react";
 import { PRODUCTS } from "../../../../core/utils/product";
-import { useDispatch } from 'react-redux';
-import { toggle } from '../../../../store/favSlide';
+// import { useDispatch } from 'react-redux';
+// import { toggle } from '../../../../store/favSlide';
 
 export default function ProductDetail() {
   const { id }= useParams();
   const [product, setProduct] = useState([])
   useEffect(() => {
     PRODUCTS.map(p => {
-      if (p.id == Number(id)) {
+      if (p.id === Number(id)) {
         setProduct(p)
+        return
       }
     })
   }, [])
@@ -26,7 +27,7 @@ export default function ProductDetail() {
   return (
     <div className="container bg-main">
       <div className="d-flex row py-4">
-        <img className="col-6" src={product.img}></img>
+        <img className="col-6" alt="img product" src={product.img}></img>
         <div className="col-6 pl-20">
           <h2 className="mb-4">{product.name}</h2>
           <strong className="pb-20 font-20">PRICE: {product.price}</strong><br/>

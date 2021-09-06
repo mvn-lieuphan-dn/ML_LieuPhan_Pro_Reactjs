@@ -23,7 +23,7 @@ export default function Box(props) {
 
   return (
     <Link to={`/products/${props.product.id}`} className="wrapper d-block">
-      <img src={props.product.img}></img>
+      <img src={props.product.img} alt="img box"></img>
       <span className={`icon-fav ${props.product.favorite ? 'active-fav' : ''}`} onClick={(event) => handleFav(event, props.product.id)}><FaHeart /></span>
       <div className="d-flex justify-content-between px-1">
         <h3 className="name">{props.product.name}</h3>

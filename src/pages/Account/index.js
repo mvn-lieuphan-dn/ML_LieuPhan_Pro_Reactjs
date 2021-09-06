@@ -1,17 +1,17 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { PRODUCTS } from '../../core/utils/product';
 import Box from '../../components/commons/box';
 
 function Login() {
-  const history = useHistory();
   const [products, setProductFav] = useState([])
   useEffect(() => {
     const proFav = []
     PRODUCTS.map(p => {
       if(p.favorite) {
         proFav.push(p)
+        return
       }
     })
     setProductFav(proFav)
